@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    var list = ViewData["ExampleList"] as List<Core.Data.Models.Example>;
+}
+
+<h1>Show data</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in list)
+        {
+            <tr>
+                <td>@item.Id.ToString()</td>
+                <td>@item.Title</td>
+            </tr>
+        }
+    </tbody>
+</table>
